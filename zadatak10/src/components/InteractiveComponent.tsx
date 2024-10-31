@@ -38,12 +38,21 @@ const InteractiveComponent = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center', margin: '20px' }}>
       <h1>Interactive Component</h1>
       <p>Stanje: {state}</p>
-      <button onClick={() => setState("Novo Stanje")}>Promijeni Stanje</button>
-      <input ref={inputRef} type="text" placeholder="Unesite tekst ovdje" />
-      <button onClick={handleButtonClick}>Fokusiraj input</button>
+      <button onClick={() => setState("Novo Stanje")} style={{ display: 'block', margin: '10px auto' }}>
+        Promijeni Stanje
+      </button>
+      <button onClick={handleButtonClick} style={{ display: 'block', margin: '10px auto' }}>
+        Fokusiraj input
+      </button>
+      <input
+        ref={inputRef}
+        type="text"
+        placeholder="Unesite tekst ovdje"
+        style={{ display: 'block', margin: '10px auto', textAlign: 'center' }}
+      />
     </div>
   );
 };
